@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-Tube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="w-11/12 mx-auto py-4 border-b flex justify-between items-center">
+            <div class="">
+                <a href="#"><img src="assets/Logo.png" alt=""></a>
+            </div>
+            <div>
+                <label class="input input-bordered flex items-center gap-2">
+                    <input type="text" class="grow" placeholder="Search" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="h-4 w-4 opacity-70">
+                        <path fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </label>
+            </div>
+            <div>
+                <button class="btn">SORT</button>
+            </div>
+        </nav>
+        <nav id="category-container" class="w-11/12 mx-auto py-4 flex justify-center gap-5">
+        </nav>
+    </header>
+    <main>
+        <section id="videos-container"
+            class="w-11/12 mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-7">
+            <div id="details-container"></div>
+        </section>
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <button id="showModal" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+            <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="modal-content">
+                       
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
